@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="group/create" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/group/form.jsp" />
+	</definition>
+	
+	<definition name="group/search" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/group/search.jsp" />
+	</definition>
+	
+	<definition name="group/edit" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/group/form.jsp" />
+	</definition>
+	
+	<definition name="group/delete" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/group/delete.jsp" />
+	</definition>
+	
+	<definition name="group/assignRoles" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/group/assignRoles.jsp" />
+	</definition>
+	
+	<definition name="group/assignUsers" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/group/assignUsers.jsp" />
+	</definition>
+	
+	<definition name="group/joinOrganization" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/group/joinOrganization.jsp" />
+	</definition>
+	
+</tiles-definitions>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="organization/create" extends="contentTemplate">
+	
+		<put-attribute name="content" value="/WEB-INF/views/tiles/organization/form.jsp" />
+	</definition>
+	
+	<definition name="organization/search" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/organization/search.jsp" />
+	</definition>
+	
+	<definition name="organization/edit" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/organization/form.jsp" />
+	</definition>
+	
+	<definition name="organization/delete" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/organization/delete.jsp" />
+	</definition>
+	
+</tiles-definitions>

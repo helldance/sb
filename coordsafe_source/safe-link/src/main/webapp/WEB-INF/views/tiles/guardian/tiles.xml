@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="guardian/create" extends="blankTemplate">
+	
+		<put-attribute name="content" value="/WEB-INF/views/tiles/guardian/form.jsp" />
+	</definition>
+	
+	<definition name="guardian/search" extends="blankTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/guardian/search.jsp" />
+	</definition>
+	
+	<definition name="guardian/edit" extends="blankTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/guardian/profile.jsp" />
+	</definition>
+	
+	<definition name="guardian/profile" extends="blankTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/guardian/profile.jsp" />
+	</definition>
+		
+	<definition name="guardian/resetpassword" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/guardian/resetpassword.jsp" />
+	</definition>
+	<definition name="guardian/delete" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/guardian/delete.jsp" />
+	</definition>
+	
+</tiles-definitions>

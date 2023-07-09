@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="locator/create" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/locator/form.jsp" />
+	</definition>
+	
+	<definition name="locator/search" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/locator/search.jsp" />
+	</definition>
+	
+	<definition name="locator/delete" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/locator/delete.jsp" />
+	</definition>
+	
+	<definition name="locator/edit" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/locator/form.jsp" />
+	</definition>
+
+	<definition name="locator/locateOnMap" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/home.jsp" />
+	</definition>
+	
+	<definition name="locator/assign" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/locator/assign.jsp" />
+	</definition>
+		
+<!-- 	<definition name="ward/assignRoles" extends="template">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/assignRoles.jsp" />
+	</definition>
+	
+	<definition name="user/assignGroups" extends="template">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/assignGroups.jsp" />
+	</definition>
+	
+	<definition name="user/joinOrganization" extends="template">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/joinOrganization.jsp" />
+	</definition>
+ -->	
+</tiles-definitions>

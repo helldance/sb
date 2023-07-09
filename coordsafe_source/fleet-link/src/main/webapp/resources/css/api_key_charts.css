@@ -1,0 +1,64 @@
+#counter {
+	background-color: #ffffff;
+	/* width: 1050px; */
+	height: 300px;
+	margin-bottom: 12px;
+	/* position:absolute;
+    top: 50px;
+    left: 10px; */
+	z-index: 1
+}
+
+#resource {
+	background-color: #ffffff;
+	/* width: 540px; */
+	height: 320px;
+	/* position:absolute;
+    top: 340px;
+    left: -10px; */
+	z-index: 0
+}
+
+#summary-table {
+	background-color: #ffffff;
+	/* position:absolute;
+    top: 50px;
+    left: 360px;  */
+	z-index: 0
+}
+
+/* #key-option {
+	position: absolute;
+	top: 10px;
+	left: 10px; 
+}
+
+#type-option {
+	position: absolute;
+	top: 10px;
+	left: 80px;
+} */
+
+#trip-option {
+	display: none;
+}
+
+#duration {
+	/* width: 330px; */
+	height: 30px;
+	/* position:absolute;
+    top: 7px;
+    left: 240px; */
+	z-index: 1;
+}
+
+#options-header {
+	/* position: relative;
+	top: 10px; */
+	width: 100%;
+	z-index: 1;
+	vertical-align: middle;
+	margin-bottom: 36px; */
+	margin-left: 24px;
+	/* background: #AAA; */
+}

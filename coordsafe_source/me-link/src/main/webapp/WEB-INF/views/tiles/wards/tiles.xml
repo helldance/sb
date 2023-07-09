@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="wards/create" extends="contentTemplate">
+	
+		<put-attribute name="content" value="/WEB-INF/views/tiles/wards/form.jsp" />
+	</definition>
+	
+	<definition name="wards/search" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/wards/search.jsp" />
+	</definition>
+	
+	<definition name="wards/edit" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/wards/form.jsp" />
+	</definition>
+	
+	<definition name="wards/delete" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/wards/delete.jsp" />
+	</definition>
+	
+</tiles-definitions>

@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [12/Feb/2014:10:40:19 +0800] "POST /geoready/api/device/deregister/android HTTP/1.1" 200 - http-bio-8070-exec-1 897
+0:0:0:0:0:0:0:1 - - [12/Feb/2014:10:40:26 +0800] "POST /geoready/api/device/deregister/android HTTP/1.1" 200 - http-bio-8070-exec-2 216
+0:0:0:0:0:0:0:1 - - [12/Feb/2014:10:41:29 +0800] "POST /geoready/api/device/register/android HTTP/1.1" 201 - http-bio-8070-exec-4 401
+0:0:0:0:0:0:0:1 - - [12/Feb/2014:10:43:00 +0800] "POST /geoready/api/device/register/android HTTP/1.1" 201 - http-bio-8070-exec-6 1374

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+    xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://cxf.apache.org/jaxrs
+		http://cxf.apache.org/schemas/jaxrs.xsd" >
+
+    <!-- do not use import statements if CXFServlet init parameters link to this beans.xml -->
+
+    <import resource="classpath:META-INF/cxf/cxf.xml" />
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+    
+    <jaxrs:server id="locatorWs" address="/" >     
+        <jaxrs:serviceBeans>
+            <ref bean="locatorWsBean" />
+            <ref bean="userWsBean" />
+            <ref bean="guardianWsBean" />
+            <ref bean="wardWsBean" />
+            <ref bean="geofenceWsBean" />
+            <ref bean="settingWsBean" />
+            <ref bean="wardEventWsBean" />
+            <ref bean="alarmWsBean" />
+            <ref bean="deviceWsBean" />
+            <ref bean="distanceWsBean" />
+            <ref bean="vehicleWsBean" />
+        </jaxrs:serviceBeans>
+        <jaxrs:providers> 
+            <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/> 
+        </jaxrs:providers> 
+        <!-- <jaxrs:extensionMappings>
+                <entry key="xml" value="application/xml" />
+                <entry key="json" value="application/json" />
+                <entry key="feed" value="application/atom+xml" />
+                <entry key="form" value="multipart/form-data" />
+        </jaxrs:extensionMappings> -->
+    </jaxrs:server>
+ 
+    <bean
+        id="locatorWsBean"
+        class="com.coordsafe.locator.ws.LocatorWebServiceRestImpl" />
+    
+    <bean
+        id="userWsBean"
+        class="com.coordsafe.user.ws.UserWebServiceImpl" />
+    
+     <bean
+        id="guardianWsBean"
+        class="com.coordsafe.guardian.ws.GuardianWebServiceImpl" />
+     
+     <bean
+        id="wardWsBean"
+        class="com.coordsafe.ward.ws.WardWebServiceImpl" />
+     
+     <bean
+        id="geofenceWsBean"
+        class="com.coordsafe.geofence.ws.GeofenceWebServiceImpl" />
+     
+     <bean
+        id="settingWsBean"
+        class="com.coordsafe.notificationsetting.ws.WardNotificationSettingWebServiceImpl" />
+     
+     <bean
+        id="wardEventWsBean"
+        class="com.coordsafe.wardevent.ws.WardEventWebServiceImpl" />
+     
+     <bean
+        id="alarmWsBean"
+        class="com.coordsafe.alarm.ws.AlarmWebServiceImpl" />
+     
+     <bean
+        id="deviceWsBean"
+        class="com.coordsafe.device.ws.DeviceTokenWebServiceImpl" />
+     
+     <bean
+        id="distanceWsBean"
+        class="com.coordsafe.safedistance.ws.SafedistanceWebServiceImpl" />
+     
+     <bean
+        id="vehicleWsBean"
+        class="com.coordsafe.vehicle.ws.VehicleWebServiceImpl" />
+</beans>

@@ -1,0 +1,18 @@
+#line-chart {
+    /* margin: 0 auto; */
+   -moz-box-shadow: 0 0 3px #888;
+	-webkit-box-shadow: 0 0 3px #888;
+	box-shadow: 0 0 3px #888;
+    /* background-color:#E0E6FF; */
+    background-color: rgb(249, 249, 249);  
+    width: 100%;
+    height: 220px;
+    position:fixed;
+    bottom:0px;
+    z-index: 99;
+    visibility:hidden;
+    /* display: none; */
+    opacity:0.85;
+    /* filter:alpha(opacity=90); */
+}
+

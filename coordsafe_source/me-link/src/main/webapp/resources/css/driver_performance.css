@@ -1,0 +1,50 @@
+#speeding{
+    -webkit-box-shadow: 0 1px 3px #666;
+    margin: 0 auto;
+    background-color:#ffffff;
+    width: 900px;
+    height: 250px;
+    position:absolute;
+    top: 50px;
+    left: 10px;
+    z-index: 1
+}
+#pause{
+    -webkit-box-shadow: 0 1px 3px #666;
+    margin: 0 auto;
+    background-color:#ffffff;
+    width: 900px;
+    height: 250px;
+    position:absolute;
+    top: 330px;
+    left: 10px;
+    z-index: 0
+}
+#summary-table{
+    background-color:#ffffff;
+    position:absolute;
+    top: 50px;
+    left: 360px;
+    z-index: 0
+}
+#driver-option{
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+#type-option{
+    position:absolute;
+    top:10px;
+    left:100px;
+}
+#trip-option{
+	display:none;
+}
+#duration{
+    width: 330px;
+    height: 30px;
+    position:absolute;
+    top: 7px;
+    left: 240px;
+    z-index: 1;
+}

@@ -1,0 +1,65 @@
+#Mileage {
+    -webkit-box-shadow: 0 1px 3px #666;
+    background-color:#ffffff;
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+    /* position:absolute; */
+    /* top: 70px;
+    left: 140px; */
+    z-index: 1;
+    opacity:1;
+    filter:alpha(opacity=1);
+    margin-bottom: 10px;
+}
+#Time{
+    -webkit-box-shadow: 0 1px 3px #666;
+    background-color:#ffffff;
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+    /* position:absolute; */
+    /* top: 340px;
+    left: 140px; */
+    z-index: 1;
+    opacity:1;
+    filter:alpha(opacity=1);    
+    margin-bottom: 10px;
+}
+#Frequency{
+    -webkit-box-shadow: 0 1px 3px #666;
+    background-color:#ffffff;
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+    /* position:absolute; */
+    /* top: 610px;
+    left: 140px; */
+    z-index: 1;
+    opacity:1;
+    filter:alpha(opacity=1);    
+    margin-bottom: 10px;
+}
+#duration{
+    /* width: 100%; */
+    height: 30px;
+    margin-bottom: 40px;
+    /* position:absolute; */
+    /* top: 27px;
+    left: 360px;
+    z-index: 1; */
+}
+#myCanvas{
+    -webkit-box-shadow: 0 1px 3px #666;
+    background-color:#ffffff;
+    margin: 0 auto;
+    width: 100%px;
+    height: 250px;
+    /* position:absolute; */
+    /* top: 360px;
+    left: 40px; */
+    z-index: 1;
+    opacity:1;
+    filter:alpha(opacity=1);
+    visibility: hidden;
+}/*Whether canvas size determines image size*/

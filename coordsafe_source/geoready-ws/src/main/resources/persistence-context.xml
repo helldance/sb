@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+		
+	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="namingStrategy" ref="namingStrategy" />
+		<property name="packagesToScan">
+			<list>
+				<value>com.coordsafe.core.rbac.entity</value>
+				<value>com.coordsafe.core.codetable.entity</value>
+				<value>com.coordsafe.ward.entity</value>
+				<value>com.coordsafe.guardian.entity</value>
+				<value>com.coordsafe.retailer.entity</value>
+				<value>com.coordsafe.locator.entity</value>
+				<value>com.coordsafe.company.entity</value>
+				<value>com.coordsafe.vehicle.entity</value>
+				<value>com.coordsafe.trip.entity</value>
+				<value>com.coordsafe.geofence.entity</value>
+				<value>com.coordsafe.api.entity</value>
+				<value>com.coordsafe.event.entity</value>
+				<value>com.coordsafe.notification.entity</value>
+				<value>com.coordsafe.wardevent.entity</value>
+				<value>com.coordsafe.remote.entity</value>
+				<value>com.coordsafe.safedistance.entity</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>				
+				<prop key="hibernate.dialect">org.hibernate.spatial.dialect.postgis.PostgisDialect</prop>
+				<prop key="current_session_context_class">thread</prop>
+				<prop key="cache.use_second_level_cache">false</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="c3p0.acquire_increment">1</prop>
+				<prop key="c3p0.idle_test_period">100</prop>
+				<prop key="c3p0.max_size">30</prop>
+				<prop key="c3p0.max_statements">100</prop>
+				<prop key="c3p0.min_size">5</prop>
+				<prop key="c3p0.timeout">1800</prop>
+			</props>
+		</property>
+	</bean>
+		
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${dataSource.driverClassName}" />
+		<property name="url" value="${dataSource.url}" />
+		<property name="username" value="${dataSource.username}" />
+		<property name="password" value="${dataSource.password}" />
+	</bean>
+	
+	<bean id="namingStrategy" class="com.coordsafe.config.NamingStrategy" />
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager"> 
+		<property ref="sessionFactory" name="sessionFactory"/> 
+	</bean>
+<!-- 	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+ -->			
+</beans>

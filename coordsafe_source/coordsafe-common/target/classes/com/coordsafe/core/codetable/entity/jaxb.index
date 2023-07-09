@@ -1,0 +1,4 @@
+# Context holder for JAXB to list all classes that are to be marshal to XML
+# by JAXB.
+
+CodeTable

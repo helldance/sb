@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://cxf.apache.org/configuration/beans"
+	xmlns:configuration="http://cxf.apache.org/transports/http/configuration"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+ 	<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <!-- SMTP Server -->
+        <property name="host" value="mail.coordsafe.com.sg" />
+        <!-- SMTP Port Number-->
+        <!-- <property name="port" value="25" /> -->
+        <!-- SMTP User Name -->
+        <property name="username" value= "Info@coordsafe.com.sg" />
+        <!--  SMTP Password   -->
+        <property name="password" value="coordsafeinfo"/>
+        <!-- SMTP Server Authentication-->
+        <property name="javaMailProperties">
+            <props>
+               <!-- Authencate User -->
+               <prop key="mail.smtp.auth">true</prop>
+               <prop key="mail.smtp.timeout">25000</prop>
+           </props>
+        </property>
+    </bean>
+  
+    <bean id="simpleMailMessage" class="org.springframework.mail.SimpleMailMessage">
+      <!-- email sender -->
+        <property name="from" value="info@coordsafe.com.sg" />
+    </bean>
+    
+    <bean id="mailService" class="com.coordsafe.notification.common.CoordsafeMailService">
+        <property name="javaMailSender" ref="javaMailSender" />
+        <property name="simpleMailMessage" ref="simpleMailMessage" />
+        <property name="velocityEngine" ref="velocityEngine"/> 
+        <property name="mailContent" value="emailContent.vm"></property>
+    </bean>
+    
+     <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+			<props>
+		      <prop key="resource.loader">file</prop>
+		      <prop key="file.resource.loader.class">
+		        org.apache.velocity.runtime.resource.loader.FileResourceLoader
+		      </prop>
+	 		      <prop key="file.resource.loader.path">C:/Users/Ray/Workspace/coordsafe2/coordsafe/fleet-link/src/main/webapp/WEB-INF/velocity</prop>
+	    		      
+ 
+ 				<!-- <prop key="file.resource.loader.path">WEB-INF/velocity</prop> -->
+   
+ 				<prop key="file.resource.loader.cache">false</prop>
+		    </props>
+        </property>
+    </bean> 
+    
+    <bean id="hoiioSMSService" class="com.coordsafe.notification.common.SMSServiceByHoiio">
+        <property name="hoiio" ref="hoiio" />
+    </bean>
+    <bean id="hoiio" class="com.hoiio.sdk.Hoiio">
+    	<constructor-arg  index="0" value="GUO1a9qjFbuEPwv0"></constructor-arg>
+    	<constructor-arg  index="1" value="lxJVT1RIweHWKzpW"></constructor-arg>
+    	
+    </bean>
+</beans>

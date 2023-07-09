@@ -1,0 +1,9 @@
+0:0:0:0:0:0:0:1 - - [11/Mar/2014:14:57:11 +0800] "POST /geoready/api/vehicle/company/1 HTTP/1.1" 404 - http-bio-8070-exec-1 2074
+0:0:0:0:0:0:0:1 - - [11/Mar/2014:14:57:16 +0800] "GET /geoready/api/vehicle/company/1 HTTP/1.1" 404 - http-bio-8070-exec-2 364
+0:0:0:0:0:0:0:1 - - [11/Mar/2014:15:09:20 +0800] "GET /geoready/api/vehicle/company/1 HTTP/1.1" 200 - http-bio-8070-exec-1 1494
+0:0:0:0:0:0:0:1 - - [11/Mar/2014:15:24:06 +0800] "GET /geoready/api/vehicle/company/1 HTTP/1.1" 200 - http-bio-8070-exec-1 1377
+0:0:0:0:0:0:0:1 - - [11/Mar/2014:15:35:54 +0800] "GET /geoready/api/vehicle/company/1 HTTP/1.1" 200 2307 http-bio-8070-exec-1 1180
+0:0:0:0:0:0:0:1 - - [11/Mar/2014:16:48:28 +0800] "GET /geoready/api/vehicle/company/2?key=test-1234qwer HTTP/1.1" 200 2 http-bio-8070-exec-1 1743
+0:0:0:0:0:0:0:1 - - [11/Mar/2014:16:51:18 +0800] "GET /geoready/api/vehicle/company/1?key=test-1234qwer HTTP/1.1" 200 2811 http-bio-8070-exec-3 419
+0:0:0:0:0:0:0:1 - - [11/Mar/2014:16:55:03 +0800] "GET /geoready/api/vehicle/company/1?key=test-1234qwer HTTP/1.1" 200 2811 http-bio-8070-exec-5 526
+0:0:0:0:0:0:0:1 - - [11/Mar/2014:17:07:56 +0800] "POST /geoready/api/device/register/android HTTP/1.1" 201 - http-bio-8070-exec-7 2521

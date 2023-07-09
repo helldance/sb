@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="role/create" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/role/form.jsp" />
+	</definition>
+	
+	<definition name="role/search" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/role/search.jsp" />
+	</definition>
+	
+	<definition name="role/edit" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/role/form.jsp" />
+	</definition>
+	
+	<definition name="role/delete" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/role/delete.jsp" />
+	</definition>
+	
+	<definition name="role/users" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/role/users.jsp" />
+	</definition>
+	
+	<definition name="role/assignPermissions" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/role/assignPermissions.jsp" />
+	</definition>
+	
+</tiles-definitions>

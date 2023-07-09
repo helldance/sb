@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="notification/set" extends="subTemplate">
+	
+		<put-attribute name="content" value="/WEB-INF/views/tiles/notification/search.jsp" />
+	</definition>
+	
+	<definition name="notification/run" extends="subTemplate">
+	
+		<put-attribute name="content" value="/WEB-INF/views/tiles/notification/run.jsp" />
+	</definition>
+	
+	<definition name="notification/search" extends="subTemplate">
+	
+		<put-attribute name="content" value="/WEB-INF/views/tiles/notification/search.jsp" />
+	</definition>
+	
+	<definition name="notification/vehicleSearch" extends="subTemplate">
+	
+		<put-attribute name="content" value="/WEB-INF/views/tiles/notification/vehicleSearch.jsp" />
+	</definition>
+
+	
+</tiles-definitions>

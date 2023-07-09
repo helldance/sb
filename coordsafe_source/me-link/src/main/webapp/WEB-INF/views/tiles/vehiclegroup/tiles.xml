@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="vgroup/create" extends="contentTemplate">
+	
+		<put-attribute name="content" value="/WEB-INF/views/tiles/vehiclegroup/form.jsp" />
+	</definition>
+	
+	<definition name="vgroup/search" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/vehiclegroup/search.jsp" />
+	</definition>
+	
+	<definition name="vgroup/edit" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/vehiclegroup/form.jsp" />
+	</definition>
+	
+	<definition name="vgroup/delete" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/vehiclegroup/delete.jsp" />
+	</definition>
+	
+	<definition name="vgroup/assign" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/vehiclegroup/assignVehicles.jsp" />
+	</definition>	
+	
+</tiles-definitions>

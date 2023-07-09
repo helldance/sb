@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+    
+    <definition name="user/profile" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/profile.jsp" />
+	</definition>
+	
+	<definition name="user/create" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/form.jsp" />
+	</definition>
+	
+	<definition name="user/search" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/search.jsp" />
+	</definition>
+	
+	<definition name="user/delete" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/delete.jsp" />
+	</definition>
+	
+	<definition name="user/edit" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/form.jsp" />
+	</definition>
+	
+	<definition name="user/resetPassword" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/resetPassword.jsp" />
+	</definition>
+	
+	<definition name="user/changePassword" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/changePassword.jsp" />
+	</definition>
+	
+	<definition name="user/assignRoles" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/assignRoles.jsp" />
+	</definition>
+	
+	<definition name="user/assignGroups" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/assignGroups.jsp" />
+	</definition>
+	
+	<definition name="user/joinOrganization" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/joinOrganization.jsp" />
+	</definition>
+	
+</tiles-definitions>

@@ -1,0 +1,29 @@
+<html>
+<body>
+<h3>${subject}</h3>
+
+<div>
+   Dear User,
+   <div>
+   		<p>${content}</p>
+   </div>
+
+	Thank you!
+</div>
+
+<p>Team Coordsafe<br>
+<a href="http://www.coordsafe.com.sg">http://www.coordsafe.com.sg</a></i>
+</p>
+
+<hr>
+
+<div>
+<center>
+Please kindly contact <a href="mailto:info@coordsafe.com.sg">info@coordsafe.com.sg</a> if you have any questions or concerns. Please be sure to forward this email as well to expedite processing of your request.
+</center>
+</div>
+</body>
+
+
+
+</html>

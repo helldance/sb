@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+      
+<tiles-definitions>
+	<definition name="template" template="/WEB-INF/views/main_template.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/tiles/header.jsp" />
+		<put-attribute name="menu" value="" />
+		<!-- <put-attribute name="footer" value=" " /> -->
+	</definition>
+	
+	<definition name="contentTemplate" template="/WEB-INF/views/sub_main_template.jsp">		
+	</definition>
+	
+	<definition name="home" extends="template">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/home.jsp" />
+	</definition>
+	
+	<definition name="onemap" extends="template">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/onemap.jsp" />
+	</definition>
+	
+	<definition name="dashboard" extends="template">
+		<put-attribute name="menu" value="/WEB-INF/views/tiles/menu.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/tiles/dashboard.jsp" />
+	</definition>
+	
+	<definition name="subTemplate" extends="template">
+		<put-attribute name="menu" value="/WEB-INF/views/tiles/menu.jsp" />
+	</definition>
+
+	<definition name="login" template="/WEB-INF/views/tiles/login.jsp">
+		<!-- <put-attribute name="menu" value="" /> -->
+		<!-- <put-attribute name="content" value="/WEB-INF/views/tiles/login.jsp" /> -->
+	</definition>
+	
+	<definition name="error" extends="template">
+		
+		<put-attribute name="content" value="/WEB-INF/views/tiles/error.jsp" />
+	</definition>	
+	
+		
+	<definition name="web/error" template="/WEB-INF/views/tiles/err.jsp">
+	</definition>
+</tiles-definitions>
+
+	

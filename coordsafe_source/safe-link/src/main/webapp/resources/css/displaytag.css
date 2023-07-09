@@ -1,0 +1,38 @@
+@CHARSET "ISO-8859-1";
+
+.displaytag {
+	border: thin solid #060606;
+	width: 100%;
+	margin: 20px 0 20px 0;
+}
+
+.displaytag th,td {
+	padding: 2px 4px 2px 4px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.displaytag thead tr {
+	background-color: #81A6FD;
+}
+
+.displaytag th.sorted {
+	background-color: #5588EE;
+}
+
+.displaytag th.sorted a, th.sortable a {
+	display: block;
+}
+
+.displaytag th a, th a:VISITED, th a:HOVER {
+	color: black;
+	text-decoration: none;
+}
+
+.displaytag tr.odd {
+	background-color: #FFFFFF
+}
+
+.displaytag tr.tableRowEven,tr.even {
+	background-color: #E9E9E9
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="geofence/new" extends="subTemplate">
+	
+		<put-attribute name="content" value="/WEB-INF/views/tiles/geofence/fence.jsp" />
+	</definition>
+	
+	<definition name="route/new" extends="subTemplate">
+	
+		<put-attribute name="content" value="/WEB-INF/views/tiles/geofence/route.jsp" />
+	</definition>
+	
+	<definition name="geofence/search" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/geofence/search.jsp" />
+	</definition>
+	
+	<definition name="geofence/edit" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/geofence/form.jsp" />
+	</definition>
+	
+	<definition name="geofence/delete" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/geofence/delete.jsp" />
+	</definition>
+	
+	<definition name="geofence/assignVehicles" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/geofence/assignVehicles.jsp" />
+	</definition>	
+	
+	<definition name="geofence/within" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/geofence/within.jsp" />
+	</definition>	
+	
+</tiles-definitions>

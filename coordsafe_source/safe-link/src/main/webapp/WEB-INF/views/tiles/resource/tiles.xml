@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="resource/create" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/resource/form.jsp" />
+	</definition>
+	
+	<definition name="resource/search" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/resource/search.jsp" />
+	</definition>
+	
+	<definition name="resource/edit" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/resource/form.jsp" />
+	</definition>
+	
+	<definition name="resource/delete" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/resource/delete.jsp" />
+	</definition>
+	
+</tiles-definitions>

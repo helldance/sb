@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://cxf.apache.org/configuration/beans"
+	xmlns:configuration="http://cxf.apache.org/transports/http/configuration"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://cxf.apache.org/configuration/beans http://cxf.apache.org/schemas/configuration/cxf-beans.xsd
+		http://cxf.apache.org/transports/http/configuration http://cxf.apache.org/schemas/wsdl/http-conf.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <!-- for notification Topic -->
+	<bean id="notificationTopic" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg value="jms/SafeLinkNotification"></constructor-arg>
+	</bean>
+	
+	<!-- The Producer/Publisher of Notification Topic Message -->
+	<bean id="topicNotificationMessageProducer" class="com.coordsafe.notification.producer.TopicMessageProducer">
+		<!-- The jmsTemplate should use which destination, depending on the target 	topic -->
+		<property name="jmsTemplate" ref="jmsTemplateNotification"></property>
+	</bean>
+	<bean id="jmsTemplateNotification" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="defaultDestination" ref="notificationTopic" />
+	</bean>
+    
+	<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <!-- SMTP Server -->
+        <property name="host" value="mail.coordsafe.com.sg" />
+        <!-- SMTP Port Number-->
+        <property name="port" value="587" /> 
+        <!-- SMTP User Name -->
+        <property name="username" value= "info@coordsafe.com.sg" />
+        <!--  SMTP Password   -->
+        <property name="password" value="coordsafe2013"/>
+        <!-- SMTP Server Authentication-->
+        <property name="javaMailProperties">
+            <props>
+               <!-- Authencate User -->
+               <prop key="mail.smtp.auth">true</prop>
+               <prop key="mail.smtp.timeout">25000</prop>
+           </props>
+        </property>
+    </bean>
+  
+    <bean id="simpleMailMessage" class="org.springframework.mail.SimpleMailMessage">
+      <!-- email sender -->
+        <property name="from" value="info@coordsafe.com.sg" />
+    </bean>
+    
+    <bean id="mailService" class="com.coordsafe.notification.common.CoordsafeMailService">
+        <property name="javaMailSender" ref="javaMailSender" />
+        <property name="simpleMailMessage" ref="simpleMailMessage" />
+        <property name="velocityEngine" ref="velocityEngine"/> 
+        <property name="mailContent" value="emailContent.vm"></property>
+    </bean>
+    
+     <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+			<props>
+		      <prop key="resource.loader">file</prop>
+		      <prop key="file.resource.loader.class">
+		      	org.apache.velocity.runtime.resource.loader.FileResourceLoader
+		      </prop>
+	 		    <!-- <prop key="file.resource.loader.path">C:\Users\Ray\Workspace\coordsafe2\coordsafe\geoready-ws\src\main\webapp\resources\velocity</prop> -->
+ 				<prop key="file.resource.loader.path">/opt/apache-tomcat-7.0.42/webapps/geoready/WEB-INF/velocity</prop>
+ 				<prop key="file.resource.loader.cache">false</prop>
+		    </props>
+        </property>
+    </bean> 
+    
+    <bean id="hoiioSMSService" class="com.coordsafe.notification.common.SMSServiceByHoiio">
+        <property name="hoiio" ref="hoiio" />
+    </bean>
+    
+    <bean id="hoiio" class="com.hoiio.sdk.Hoiio">
+    	<constructor-arg  index="0" value="GUO1a9qjFbuEPwv0"></constructor-arg>
+    	<constructor-arg  index="1" value="lxJVT1RIweHWKzpW"></constructor-arg>
+    	
+    </bean>
+    
+    <!-- for notification container-->
+	<!-- <bean
+		class="org.springframework.jms.listener.DefaultMessageListenerContainer" id="jmsContainerN1">
+		<property name="connectionFactory" ref="connectionFactory"></property>
+		<property name="destination" ref="notificationTopic"></property>
+		<property name="pubSubDomain" value="true"></property>
+		<property name="messageListener" ref="topicSMSMessageListener"></property>
+	</bean>
+
+	<bean
+		class="org.springframework.jms.listener.DefaultMessageListenerContainer" id="jmsContainerN2">
+		<property name="connectionFactory" ref="connectionFactory"></property>
+		<property name="destination" ref="notificationTopic"></property>
+		<property name="pubSubDomain" value="true"></property>
+		<property name="messageListener" ref="topicEMAILMessageListener"></property>
+	</bean> -->
+	
+	<!-- for notification listener-->
+	<bean id="topicSMSMessageListener" class="com.coordsafe.notification.subscribe.SMSTopicSubscribe" />
+	<bean id="topicEMAILMessageListener" class="com.coordsafe.notification.subscribe.EMAILTopicSubscribe" />
+    
+</beans>

@@ -1,0 +1,1 @@
+0:0:0:0:0:0:0:1 - - [06/Feb/2014:12:03:02 +0800] "POST /geoready/api/guardian/5/location HTTP/1.1" 200 - http-bio-8070-exec-1 12824

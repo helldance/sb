@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="trip/search" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/trip/search.jsp" />
+	</definition>
+	
+	<definition name="trip/edit" extends="contentTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/trip/form.jsp" />
+	</definition>
+
+</tiles-definitions>

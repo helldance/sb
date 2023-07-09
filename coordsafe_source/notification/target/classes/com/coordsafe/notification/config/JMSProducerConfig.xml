@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xmlns:jms="http://www.springframework.org/schema/jms"
+		xmlns:context="http://www.springframework.org/schema/context"      
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    					http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    					http://www.springframework.org/schema/jms
+    					http://www.springframework.org/schema/jms/spring-jms-3.0.xsd
+    					http://www.springframework.org/schema/context
+    					http://www.springframework.org/schema/context/spring-context-3.0.xsd">  
+ 
+<context:annotation-config/>
+ <context:component-scan base-package="com.coordsafe.notification.*"/> 
+
+ <bean class="org.apache.activemq.command.ActiveMQQueue" id="destination">
+  <constructor-arg value="TEST.Q1"></constructor-arg>
+ </bean>
+ 
+ <bean class="org.springframework.jms.core.JmsTemplate" id="producerTemplate" p:connectionFactory-ref="connectionFactory" p:defaultDestination-ref="destination"></bean>
+ <bean class="org.apache.activemq.ActiveMQConnectionFactory" id="connectionFactory" p:brokerURL="tcp://localhost:61616"></bean>
+
+ <bean class="com.coordsafe.notification.producer.MessageProducer" id="simpleMessageProducer">
+  <property name="jmsTemplate" ref="producerTemplate"></property>
+ </bean>
+ 
+</beans> 

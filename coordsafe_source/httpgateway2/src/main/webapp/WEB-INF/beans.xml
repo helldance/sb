@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://cxf.apache.org/jaxrs
+		http://cxf.apache.org/schemas/jaxrs.xsd" >
+
+    <!-- do not use import statements if CXFServlet init parameters link to this beans.xml -->
+
+    <import resource="classpath:META-INF/cxf/cxf.xml" />
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+    
+    <context:annotation-config />
+    <context:component-scan base-package="com.coordsafe.httpgateway.*" />
+    
+    <jaxrs:server
+        id="wardMobileWebService"
+        address="/ward" >     
+        <jaxrs:serviceBeans>
+            <ref bean="wardMobileWebServiceBean" />
+        </jaxrs:serviceBeans>
+        <jaxrs:providers> 
+            <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/> 
+        </jaxrs:providers> 
+        <!-- <jaxrs:extensionMappings>
+                <entry key="xml" value="application/xml" />
+                <entry key="json" value="application/json" />
+                <entry key="feed" value="application/atom+xml" />
+                <entry key="form" value="multipart/form-data" />
+        </jaxrs:extensionMappings> -->
+    </jaxrs:server>
+
+    <bean
+        id="wardMobileWebServiceBean"
+        class="com.coordsafe.httpgateway.ws.WardMobileWebServiceImpl" />
+</beans>

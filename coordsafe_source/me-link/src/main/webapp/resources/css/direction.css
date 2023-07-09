@@ -1,0 +1,56 @@
+
+#zone {
+   /*  position: absolute;
+    top: 10px;
+    left: 450px; */
+}
+#map {
+    -webkit-box-shadow: 0 1px 3px #666;
+    background-color:#ffffff;
+    margin: 0 auto;
+    width: 100%;
+    height: 640px;
+/*     position:absolute;
+    top: 50px;
+    left: 0px; */
+    z-index: 1;
+    opacity:1;
+    filter:alpha(opacity=1);
+}
+/* fix map control broken */
+#map img {
+	max-width: none;
+}
+
+#map2 {
+    -webkit-box-shadow: 0 1px 3px #666;
+    background-color:#ffffff;
+    margin: 0 auto;
+    width: 600px;
+    height: 350px;
+    /* position:absolute;
+    top: 50px;
+    left: 630px; */
+    z-index: 1;
+    opacity:1;
+    filter:alpha(opacity=1);
+}
+#distance{    
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    /* position:absolute;
+    top: 0px;
+    left: 630px; */
+    z-index: 1;
+    opacity:1;
+    filter:alpha(opacity=1);    
+}
+#display-image{
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    position:absolute;
+    top: 500px;
+    left: 630px;
+}

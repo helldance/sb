@@ -1,0 +1,25 @@
+<html>
+<body>
+<h3>${subject}</h3>
+
+<div>
+   Dear,<br>
+   ${content}
+</div>
+
+<hr>
+
+<div>
+<center>
+Please kindly contact info@coordsafe.com.sg if you have any questions or concerns. Please be sure to forward this email as well to expedite processing of your request.
+
+Thank you!
+Team Coordsafe
+http://www.coordsafe.com.sg
+</center>
+</div>
+</body>
+
+
+
+</html>

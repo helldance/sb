@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="ward/create" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/ward/form.jsp" />
+	</definition>
+	
+	<definition name="ward/search" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/ward/search.jsp" />
+	</definition>
+	
+	<definition name="ward/delete" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/ward/delete.jsp" />
+	</definition>
+	
+	<definition name="ward/edit" extends="subTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/ward/form.jsp" />
+	</definition>
+	
+<!-- 	<definition name="ward/assignRoles" extends="template">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/assignRoles.jsp" />
+	</definition>
+	
+	<definition name="user/assignGroups" extends="template">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/assignGroups.jsp" />
+	</definition>
+	
+	<definition name="user/joinOrganization" extends="template">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/user/joinOrganization.jsp" />
+	</definition>
+ -->	
+</tiles-definitions>

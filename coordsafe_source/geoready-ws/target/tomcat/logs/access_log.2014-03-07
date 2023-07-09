@@ -1,0 +1,1 @@
+0:0:0:0:0:0:0:1 - - [07/Mar/2014:14:17:25 +0800] "POST /geoready/api/device/register HTTP/1.1" 201 - http-bio-8070-exec-1 1271

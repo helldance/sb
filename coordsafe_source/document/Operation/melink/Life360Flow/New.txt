@@ -1,0 +1,5 @@
+1. No remove circle
+2. No msg popup in app
+3. No device mgmt
+4. no tracking
+5. mobile safe zone
